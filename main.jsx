@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom/client";
-import App from "./App";
+import App from "./src/App";
 import Home from "./Home";
 import About from "./About";
 import Contact from "./Contact";
