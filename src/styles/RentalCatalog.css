@@ -1,20 +1,20 @@
-.seasonal-items .items-grid {
+.rental-items .items-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* creates four columns */
   grid-gap: 15px; /* space between the items */
 }
 
-.seasonal-items .item {
+.rental-items .item {
   text-align: center;
 }
 
-.seasonal-items img {
+.rental-items img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-.seasonal-items button {
+.rental-items button {
   margin-top: 10px;
   padding: 8px 16px;
   background-color: #007bff;
@@ -24,6 +24,6 @@
   cursor: pointer;
 }
 
-.seasonal-items button:hover {
+.rental-items button:hover {
   background-color: #0056b3;
 }

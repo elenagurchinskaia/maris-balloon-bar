@@ -1,0 +1,39 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  background-color: #f8f9fa;
+}
+
+.nav-logo img {
+  height: 50px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-item {
+  margin: 0 10px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-item a.active {
+  color: grey;
+}
+
+.social-media-icons a {
+  margin-left: 10px;
+  color: #3b5998;
+  font-size: 24px;
+}
+
+.social-media-icons a:hover {
+  color: #1da1f2;
+}

@@ -1,33 +1,34 @@
-import "../styles/SeasonalItems.css";
+import "../styles/RentalCatalog.css";
+
 import React, { useState } from "react";
 
-function SeasonalItems() {
+function RentalItems() {
   const [cart, setCart] = useState([]);
 
   const items = [
     {
       id: 1,
-      name: "Spring Bouquet",
-      src: "https://via.placeholder.com/150?text=Spring+Bouquet",
-      price: "$25",
+      name: "Deluxe Party Pack",
+      src: "https://via.placeholder.com/150?text=Deluxe+Party+Pack",
+      price: "$45",
     },
     {
       id: 2,
-      name: "Summer Festival",
-      src: "https://via.placeholder.com/150?text=Summer+Festival",
-      price: "$30",
+      name: "Wedding Decor Set",
+      src: "https://via.placeholder.com/150?text=Wedding+Decor+Set",
+      price: "$120",
     },
     {
       id: 3,
-      name: "Autumn Wreath",
-      src: "https://via.placeholder.com/150?text=Autumn+Wreath",
-      price: "$28",
+      name: "Corporate Event Kit",
+      src: "https://via.placeholder.com/150?text=Corporate+Event+Kit",
+      price: "$200",
     },
     {
       id: 4,
-      name: "Winter Garland",
-      src: "https://via.placeholder.com/150?text=Winter+Garland",
-      price: "$35",
+      name: "Birthday Bash Supplies",
+      src: "https://via.placeholder.com/150?text=Birthday+Bash+Supplies",
+      price: "$85",
     },
   ];
 
@@ -41,8 +42,8 @@ function SeasonalItems() {
   };
 
   return (
-    <div className="seasonal-items">
-      <h1>Seasonal Items</h1>
+    <div className="rental-items">
+      <h1>rental catalog</h1>
       <div className="items-grid">
         {items.map((item) => (
           <div key={item.id} className="item">
@@ -62,4 +63,4 @@ function SeasonalItems() {
   );
 }
 
-export default SeasonalItems;
+export default RentalItems;

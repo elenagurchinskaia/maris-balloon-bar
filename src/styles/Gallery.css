@@ -1,0 +1,15 @@
+.gallery .image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* creates four columns */
+  grid-gap: 10px; /* space between images */
+}
+
+.gallery .image-item {
+  width: 100%;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block; /* removes bottom margin/gap */
+}
