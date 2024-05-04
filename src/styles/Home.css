@@ -1,0 +1,74 @@
+.home {
+  position: relative;
+  overflow-x: hidden; /* prevent horizontal scroll */
+}
+
+.featured-image {
+  position: relative;
+  width: 100%;
+  /* height: 100vh; */
+  overflow: hidden;
+}
+
+.featured-image img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover; /* Ensures image covers the area */
+  position: fixed; /* Creates the parallax effect */
+  top: 0;
+  left: 0;
+  z-index: -1; /* Keeps the image behind other content */
+}
+
+.text-overlay {
+  position: relative;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.contact-button,
+.scroll-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-button:hover,
+.scroll-button:hover {
+  background-color: #0056b3;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: #ffffff;
+  font-size: 24px;
+}
+
+/* .navbar { */
+/* position: relative;  */
+/* width: 100%; */
+/* background-color: #fff;  */
+/* z-index: 10; */
+/* } */
+
+.gallery {
+  margin-top: 20px;
+  background-color: white;
+}

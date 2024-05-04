@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "../styles/BookEvent.css";
+import Navbar from "../components/Navbar";
 
 function BookEvent() {
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -19,19 +20,22 @@ function BookEvent() {
   };
 
   return (
-    <div className="book-event">
-      <h1>Book Your Event</h1>
-      <form onSubmit={handleSubmit}>
-        <DatePicker
-          selected={selectedDate}
-          onChange={handleDateChange}
-          minDate={new Date()}
-          dateFormat="MMMM d, yyyy"
-          inline
-        />
-        <button type="submit">Book Event</button>
-      </form>
-    </div>
+    <>
+      <Navbar />
+      <div className="book-event">
+        <h1>Book Your Event</h1>
+        <form onSubmit={handleSubmit}>
+          <DatePicker
+            selected={selectedDate}
+            onChange={handleDateChange}
+            minDate={new Date()}
+            dateFormat="MMMM d, yyyy"
+            inline
+          />
+          <button type="submit">Book Event</button>
+        </form>
+      </div>
+    </>
   );
 }
 

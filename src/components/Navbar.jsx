@@ -23,7 +23,7 @@ function Navbar() {
       <div className="nav-logo">
         <Link to="/">
           <img
-            src="/Users/elena/kotocoding/maris-balloon-bar/src/assets/logo/maris-logo.png"
+            src="/assets/logo/maris-logo.png"
             alt="Mari's Balloon Bar Logo"
           />
         </Link>
@@ -101,10 +101,13 @@ function Navbar() {
         </li>
       </ul>
       <div className="social-media-icons">
-        <Link to="//facebook.com" target="_blank">
+        <Link
+          to="https://www.facebook.com/Marisballoonbar?mibextid=ZbWKwL"
+          target="_blank"
+        >
           <FaFacebook />
         </Link>
-        <Link to="//instagram.com" target="_blank">
+        <Link to="https://www.instagram.com/marisballoonbar/" target="_blank">
           <FaInstagram />
         </Link>
       </div>

@@ -1,5 +1,5 @@
 import "../styles/RentalCatalog.css";
-
+import Navbar from "../components/Navbar";
 import React, { useState } from "react";
 
 function RentalItems() {
@@ -42,24 +42,27 @@ function RentalItems() {
   };
 
   return (
-    <div className="rental-items">
-      <h1>rental catalog</h1>
-      <div className="items-grid">
-        {items.map((item) => (
-          <div key={item.id} className="item">
-            <img src={item.src} alt={item.name} />
-            <h3>{item.name}</h3>
-            <p>{item.price}</p>
-            <button onClick={() => addToCart(item)}>Add to Cart</button>
-          </div>
-        ))}
-      </div>
-      {cart.length > 0 && (
-        <div>
-          <button onClick={handlePurchase}>Make Purchase</button>
+    <>
+      <Navbar />
+      <div className="rental-items">
+        <h1>rental catalog</h1>
+        <div className="items-grid">
+          {items.map((item) => (
+            <div key={item.id} className="item">
+              <img src={item.src} alt={item.name} />
+              <h3>{item.name}</h3>
+              <p>{item.price}</p>
+              <button onClick={() => addToCart(item)}>Add to Cart</button>
+            </div>
+          ))}
         </div>
-      )}
-    </div>
+        {cart.length > 0 && (
+          <div>
+            <button onClick={handlePurchase}>Make Purchase</button>
+          </div>
+        )}
+      </div>
+    </>
   );
 }
 

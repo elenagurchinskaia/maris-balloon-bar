@@ -1,5 +1,6 @@
 import "../styles/SeasonalItems.css";
 import React, { useState } from "react";
+import Navbar from "../components/Navbar";
 
 function SeasonalItems() {
   const [cart, setCart] = useState([]);
@@ -41,24 +42,27 @@ function SeasonalItems() {
   };
 
   return (
-    <div className="seasonal-items">
-      <h1>Seasonal Items</h1>
-      <div className="items-grid">
-        {items.map((item) => (
-          <div key={item.id} className="item">
-            <img src={item.src} alt={item.name} />
-            <h3>{item.name}</h3>
-            <p>{item.price}</p>
-            <button onClick={() => addToCart(item)}>Add to Cart</button>
-          </div>
-        ))}
-      </div>
-      {cart.length > 0 && (
-        <div>
-          <button onClick={handlePurchase}>Make Purchase</button>
+    <>
+      <Navbar />
+      <div className="seasonal-items">
+        <h1>Seasonal Items</h1>
+        <div className="items-grid">
+          {items.map((item) => (
+            <div key={item.id} className="item">
+              <img src={item.src} alt={item.name} />
+              <h3>{item.name}</h3>
+              <p>{item.price}</p>
+              <button onClick={() => addToCart(item)}>Add to Cart</button>
+            </div>
+          ))}
         </div>
-      )}
-    </div>
+        {cart.length > 0 && (
+          <div>
+            <button onClick={handlePurchase}>Make Purchase</button>
+          </div>
+        )}
+      </div>
+    </>
   );
 }
 
